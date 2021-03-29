@@ -1,3 +1,27 @@
+##HOW TO SET UP
+
+Before to run UserApplication main method
+
+Download maven dependencies
+
+Download and install Postgresql (13)
+
+Start Postgresql
+
+Set up database name, set up username and password according to section 
+
+"Url connection setting" on application.properties file
+
+Then run UserApplication main method
+
+##DOCUMENTATION SWAGGER
+
+After run the project you can access to the Swagger UI to test the endpoints in case
+
+that you don't have installed postman.
+
+http://localhost:9090/swagger-ui
+
 ## CHALLENGE
 
 Create a microservice and expose a REST API, you can use any tools or framework.
