@@ -9,6 +9,7 @@ import java.util.*;
 @Getter
 @Setter
 @Entity //Anotation to set entity
+@AllArgsConstructor
 @Table(name="cliente") //Anotation to define table
 public class User {
 
