@@ -21,6 +21,14 @@ public class UserController {
         return ResponseEntity.ok(userService.findAll());
     }
 
+    @PostMapping("/{id}") //Specify REST method POST
+    public ResponseEntity<User> findById(@PathVariable("id") Integer id){
+        return userService.findById(id)
+                .map(ResponseEntity::ok) //Response 200 status code plus object user
+                .orElseGet(()-> ResponseEntity.notFound().build()); //Response 404 status code
+    }
+
+
     @PostMapping //Specify REST method POST
     public ResponseEntity<User> create(@RequestBody User user){
         user.setStatus("ACTIVE"); //Set status by default Active
