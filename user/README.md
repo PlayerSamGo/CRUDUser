@@ -5,7 +5,7 @@ Create a microservice and expose a REST API, you can use any tools or framework.
 All data should be persist in some way.
 Use of Java 8 (use lambdas or streams somehow)
 
-Create integration/Unit tests. (Jacoco covarage test)1
+Create integration/Unit tests. 
 The API should be able to:
 
 Get a user by ID
@@ -24,3 +24,5 @@ LastName - User last name
 DateOfBirth - Employee birthday and year
 
 Status - ACTIVE or INACTIVE
+
+Please provide your project with instructions of how to run it and in some git repository. Any questions feel free to ask.
