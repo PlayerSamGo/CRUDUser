@@ -29,7 +29,6 @@ public class User {
     private String lastName;
 
     @NotNull(message = "dateOfBirth.required")
-    @NotBlank(message = "dateOfBirth.blank")
     @Past(message = "dateOfBirth.past")
     @Column(nullable = false)
     private Date dateOfBirth;
