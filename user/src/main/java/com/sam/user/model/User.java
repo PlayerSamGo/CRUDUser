@@ -10,7 +10,7 @@ import java.util.*;
 @Setter
 @Entity //Anotation to set entity
 @AllArgsConstructor
-@Table(name="cliente") //Anotation to define table
+@Table(name="user") //Anotation to define table
 public class User {
 
     @Id //To relate id table
