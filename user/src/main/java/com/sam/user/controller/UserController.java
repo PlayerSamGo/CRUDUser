@@ -17,9 +17,8 @@ public class UserController {
     private UserService userService;
 
     @GetMapping //Specify REST method GET
-    public ResponseEntity<List <User>> findAll(){
-        //JUST ACTIVE USERS
-        return ResponseEntity.ok(userService.findAll());
+    public ResponseEntity<List <User>> findByStatus(){
+        return ResponseEntity.ok(userService.findByStatus("ACTIVE"));
     }
 
     @PostMapping("/{id}") //Specify REST method POST
@@ -46,9 +45,13 @@ public class UserController {
     public ResponseEntity<User> delete(@PathVariable("id") Integer id){
         return userService.findById(id)
                 .map(userFound ->{
-                    //if (userFound.getStatus().equals("ACTIVE")) {
-                    userService.delete(id); //Delete user found
-                    return ResponseEntity.ok(userFound); //Response 200 status code with object user deleted
+                    if (userFound.getStatus().equals("ACTIVE")) {
+                        userService.delete(id); //Delete user found
+                        return ResponseEntity.ok(userFound); //Response 200 status code with object user deleted
+                    }
+                    else{
+                        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(userFound); //Response 400 status code with object user not deleted
+                    }
                 })
                 .orElseGet(()->ResponseEntity.notFound().build()); //Response 404 status code
     }

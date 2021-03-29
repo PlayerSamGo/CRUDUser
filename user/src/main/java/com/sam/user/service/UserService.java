@@ -3,6 +3,7 @@ package com.sam.user.service;
 import com.sam.user.model.User;
 import com.sam.user.repository.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,8 +16,8 @@ public class UserService implements IUserService{
     private IUserRepository userRepository;
 
     @Override //Override method from interface
-    public List<User> findAll() {
-        return userRepository.findAll();
+    public List<User> findByStatus(String status) {
+        return userRepository.findByStatus(status);
     }
 
     @Override

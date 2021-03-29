@@ -5,7 +5,7 @@ import com.sam.user.model.User;
 import java.util.*;
 
 public interface IUserService {
-    List<User> findAll();
+    List<User> findByStatus(String status);
 
     Optional<User> findById(Integer id);
 
