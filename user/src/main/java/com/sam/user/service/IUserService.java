@@ -7,12 +7,12 @@ import java.util.*;
 public interface IUserService {
     List<User> findAll();
 
-    Optional<User> findById(Long id);
+    Optional<User> findById(Integer id);
 
     User create(User user);
 
     User update(User user);
 
-    void delete(Long id);
+    void delete(Integer id);
 
 }

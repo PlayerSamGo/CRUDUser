@@ -14,7 +14,7 @@ public class User {
 
     @Id //To relate id table
     @GeneratedValue(strategy = GenerationType.IDENTITY) //To increase one to one
-    private Long id;
+    private Integer id;
 
     @NotNull(message = "firstName.required")
     @NotBlank(message = "firstName.blank")
