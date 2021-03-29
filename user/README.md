@@ -1,4 +1,4 @@
-##HOW TO SET UP
+## HOW TO SET UP
 
 Before to run UserApplication main method
 
@@ -14,7 +14,7 @@ Set up database name, set up username and password according to section
 
 Then run UserApplication main method
 
-##DOCUMENTATION SWAGGER
+## DOCUMENTATION SWAGGER
 
 After run the project you can access to the Swagger UI to test the endpoints in case
 
